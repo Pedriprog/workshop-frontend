@@ -10,13 +10,14 @@ export default {
         bgLight: '#F9F5EE',
         bgDark: '#2B1D5C',
         green: '#4CAF50',
+        danger: '#E30613',
         textDark: '#1A1A2E',
         textLight: '#FFFFFF',
         star: '#FFC107',
         border: '#E0D9F0',
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        sans: ['Fredoka', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         'fade-in': {

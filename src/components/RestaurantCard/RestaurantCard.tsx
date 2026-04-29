@@ -11,9 +11,9 @@ export function RestaurantCard({ restaurant }: RestaurantCardProps) {
   const { isFavorite, toggleFavorite } = useFavorite()
 
   return (
-    <article className="group overflow-hidden rounded-xl bg-white shadow transition-all duration-200 ease-out hover:scale-[1.02] hover:shadow-xl">
+    <article className="group overflow-hidden rounded-xl bg-white shadow transition-shadow duration-200 hover:shadow-lg">
       <div className="relative">
-        <img src={`${restaurant.imageUrl}?auto=format&fit=crop&w=800&q=80`} alt={restaurant.name} className="aspect-video w-full object-cover transition duration-200 group-hover:scale-105" />
+        <img src={`${restaurant.imageUrl}?auto=format&fit=crop&w=800&q=80`} alt={restaurant.name} className="aspect-video w-full object-cover transition duration-200 group-hover:brightness-105" />
         <div className="absolute right-3 top-3">
           <FavoriteButton isFavorite={isFavorite(restaurant.id)} onToggle={() => toggleFavorite(restaurant.id)} />
         </div>

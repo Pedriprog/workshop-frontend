@@ -7,7 +7,7 @@ interface MapSidebarItemProps {
 
 export function MapSidebarItem({ restaurant }: MapSidebarItemProps) {
   return (
-    <article className="cursor-pointer rounded-lg bg-white p-3 transition-colors duration-150 hover:bg-accent/20">
+    <article className="cursor-pointer rounded-lg border border-border/70 bg-white p-3 transition-[box-shadow,border-color] duration-200 hover:border-accent/60 hover:shadow-lg">
       <div className="flex gap-3">
       <img src={`${restaurant.imageUrl}?auto=format&fit=crop&w=300&q=80`} alt={restaurant.name} className="h-16 w-16 rounded object-cover" />
       <div>

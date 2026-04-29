@@ -7,6 +7,7 @@ import { useMapOverlay } from '@/hooks'
 
 export function MapSection() {
   const { isOpen, open, close } = useMapOverlay()
+
   return (
     <section id="mappa" className="relative bg-[url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80')] bg-cover py-16">
       <div className="absolute inset-0 bg-black/55" />
@@ -16,15 +17,19 @@ export function MapSection() {
           <p className="mt-3 text-white/85">Esplora la mappa e apri le schede dei locali gluten-free in Lecce e provincia.</p>
           <Button className="mt-6" onClick={open}>Apri la mappa</Button>
         </div>
-        <div className="relative hidden h-[380px] overflow-hidden rounded-xl border border-white/40 md:block">
-          <MapContainer center={[40.3515, 18.175]} zoom={10} className="h-full w-full">
-            <TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[40.3515, 18.175]}>
-              <Popup>Lecce centro</Popup>
-            </Marker>
-          </MapContainer>
-        </div>
-        <aside className="relative space-y-3 rounded-xl bg-accent p-4">
+        {!isOpen ? (
+          <div className="relative hidden h-[380px] overflow-hidden rounded-2xl border border-white/40 md:block">
+            <MapContainer center={[40.3515, 18.175]} zoom={10} className="h-full w-full">
+              <TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+              <Marker position={[40.3515, 18.175]}>
+                <Popup>Lecce centro</Popup>
+              </Marker>
+            </MapContainer>
+          </div>
+        ) : (
+          <div className="hidden md:block" />
+        )}
+        <aside className="relative space-y-3 rounded-2xl bg-accent/20 p-4 ring-1 ring-white/25 backdrop-blur-sm">
           {MOCK_RESTAURANTS.slice(0, 4).map((restaurant) => <MapSidebarItem key={restaurant.id} restaurant={restaurant} />)}
         </aside>
       </div>

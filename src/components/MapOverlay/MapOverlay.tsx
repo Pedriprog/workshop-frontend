@@ -1,5 +1,6 @@
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import type { Restaurant } from '@/types'
 
@@ -17,7 +18,7 @@ export function MapOverlay({ isOpen, onClose, restaurants }: MapOverlayProps) {
   }, [onClose])
 
   if (!isOpen) return null
-  return (
+  return createPortal(
     <div className="fixed inset-0 z-50 bg-black/70 p-4" onClick={onClose}>
       <div className="mx-auto max-h-[85vh] w-full max-w-5xl overflow-hidden rounded-2xl bg-white animate-fade-in" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between border-b border-border px-5 py-4">
@@ -35,6 +36,7 @@ export function MapOverlay({ isOpen, onClose, restaurants }: MapOverlayProps) {
           </MapContainer>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   )
 }

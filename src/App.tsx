@@ -4,7 +4,7 @@ import { HomePage } from '@/pages/HomePage'
 
 export function App() {
   return (
-    <div className="bg-white text-textDark">
+    <div className="min-h-dvh bg-bgLight text-textDark">
       <Navbar />
       <main>
         <HomePage />

@@ -13,6 +13,7 @@ interface SearchBarProps {
 export function SearchBar({ value, onChange, filters, onFilterChange }: SearchBarProps) {
   const [isFilterPanelOpen, setIsFilterPanelOpen] = useState(false)
   const activeFilters = [filters.maxDistance, filters.minRating, filters.cuisineType].filter(Boolean).length
+
   return (
     <div className="relative w-[90vw] max-w-2xl">
       <div className="flex w-full items-center rounded-full border border-border bg-white p-2 shadow transition focus-within:ring-2 focus-within:ring-accent">
@@ -22,7 +23,7 @@ export function SearchBar({ value, onChange, filters, onFilterChange }: SearchBa
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder="Dove vuoi mangiare?"
-          className="w-full bg-transparent px-3 py-2 outline-none"
+          className="w-full bg-transparent px-3 py-2 text-textDark placeholder:text-textDark/50 outline-none"
         />
         <button
           aria-label="Apri filtri ricerca"

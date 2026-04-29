@@ -4,7 +4,7 @@ import { FooterLinks } from './FooterLinks'
 
 export function Footer() {
   return (
-    <footer className="bg-primary-dark text-black">
+    <footer className="bg-primary-dark text-white">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-16 md:grid-cols-3">
         <FooterBrand />
         <FooterLinks />
