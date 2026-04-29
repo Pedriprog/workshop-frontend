@@ -19,7 +19,7 @@ export function MapOverlay({ isOpen, onClose, restaurants }: MapOverlayProps) {
 
   if (!isOpen) return null
   return createPortal(
-    <div className="fixed inset-0 z-[1200] bg-black/70 p-4" onClick={onClose}>
+    <div className="fixed inset-0 z-1200 bg-black/70 p-4" onClick={onClose}>
       <div className="mx-auto max-h-[85vh] w-full max-w-5xl overflow-hidden rounded-2xl bg-white animate-fade-in" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between border-b border-border px-5 py-4">
           <h2 className="text-xl font-semibold text-textDark">Ristoranti vicino a te</h2>
