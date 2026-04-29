@@ -18,7 +18,7 @@ export function MapSection() {
           <Button className="mt-6" onClick={open}>Apri la mappa</Button>
         </div>
         {!isOpen ? (
-          <div className="relative hidden h-[380px] overflow-hidden rounded-2xl border border-white/40 md:block">
+          <div className="relative hidden h-95 overflow-hidden rounded-2xl border border-white/40 md:block">
             <MapContainer center={[40.3515, 18.175]} zoom={10} className="h-full w-full">
               <TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
               <Marker position={[40.3515, 18.175]}>

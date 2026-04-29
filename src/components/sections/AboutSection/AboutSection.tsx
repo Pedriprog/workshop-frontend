@@ -27,7 +27,7 @@ export function AboutSection() {
         <div className="mt-10 grid gap-6 border-t border-border pt-8 md:grid-cols-3">
           <StatCounter value={50} suffix="+" label="Ristoranti certificati" />
           <StatCounter value={1200} suffix="+" label="Recensioni" />
-          <StatCounter value={48} suffix="/10" label="Rating medio" />
+          <StatCounter value={8} suffix="/10" label="Rating medio" />
         </div>
       </div>
     </section>

@@ -11,9 +11,9 @@ export function FavoriteButton({ isFavorite, onToggle }: FavoriteButtonProps) {
     <button
       aria-label={isFavorite ? 'Rimuovi dai preferiti' : 'Aggiungi ai preferiti'}
       onClick={onToggle}
-      className="rounded-full bg-white/90 p-2 shadow transition-transform duration-150 hover:scale-110 active:scale-95 focus-visible:ring-2 focus-visible:ring-accent"
+      className="rounded-full bg-white/90 p-2 shadow transition-transform duration-150 hover:scale-110 active:scale-95 focus-visible:ring-2 focus-visible:ring-red-500"
     >
-      {isFavorite ? <HeartSolid className="h-5 w-5 animate-heart-pop text-accent" /> : <HeartOutline className="h-5 w-5 text-primary" />}
+      {isFavorite ? <HeartSolid className="h-5 w-5 animate-heart-pop text-red-500" /> : <HeartOutline className="h-5 w-5 text-primary" />}
     </button>
   )
 }
