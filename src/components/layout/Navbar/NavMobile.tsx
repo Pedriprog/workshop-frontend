@@ -29,8 +29,8 @@ export function NavMobile() {
       {open
         ? createPortal(
             <>
-              <button className="fixed inset-0 z-[2147483646] bg-black/50" onClick={() => setOpen(false)} aria-label="Chiudi menu" />
-              <div className="fixed inset-y-0 left-0 z-[2147483647] w-72 bg-primary p-5 text-white shadow-xl">
+              <button className="fixed inset-0 z-2147483646 bg-black/50" onClick={() => setOpen(false)} aria-label="Chiudi menu" />
+              <div className="fixed inset-y-0 left-0 z-2147483647 w-72 bg-primary p-5 text-white shadow-xl">
                 <div className="flex justify-end"><button aria-label="Chiudi menu" onClick={() => setOpen(false)} className="text-white"><XMarkIcon className="h-7 w-7" /></button></div>
                 <nav className="mt-3 flex flex-col items-start gap-3" aria-label="Navigazione mobile">
                   {NAV_LINKS.map((link) => <NavLink key={link.href} link={link} onNavigate={() => setOpen(false)} />)}
