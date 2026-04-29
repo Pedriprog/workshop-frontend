@@ -10,7 +10,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ query, onQueryChange, filters, onFilterChange }: HeroSectionProps) {
   return (
-    <section className="relative min-h-[80vh] overflow-hidden bg-[url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center py-24 md:min-h-screen">
+    <section className="relative min-h-[80vh] overflow-hidden bg-[url('https://tourismmedia.italia.it/is/image/mitur/20210310120715-piazza-del-duomo?wid=3200&hei=1800&fit=constrain,1&fmt=webp')] bg-cover bg-center py-24 md:min-h-screen">
       <div className="absolute inset-0 bg-black/55" />
       <div className="relative mx-auto max-w-5xl px-6 text-center text-white">
         <h1 className="text-3xl font-bold md:text-5xl lg:text-6xl">Trova Ristoranti senza glutine, vicino a te</h1>

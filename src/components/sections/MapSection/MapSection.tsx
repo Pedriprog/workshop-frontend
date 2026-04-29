@@ -9,7 +9,7 @@ export function MapSection() {
   const { isOpen, open, close } = useMapOverlay()
 
   return (
-    <section id="mappa" className="relative bg-[url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80')] bg-cover py-16">
+    <section id="mappa" className="relative bg-[url('https://upload.wikimedia.org/wikipedia/commons/2/2e/Lecce_dall%27alto.jpg')] bg-cover py-16">
       <div className="absolute inset-0 bg-black/55" />
       <div className="mx-auto grid max-w-7xl gap-6 px-6 lg:grid-cols-[1fr_1.2fr_.9fr]">
         <div className="relative text-white">

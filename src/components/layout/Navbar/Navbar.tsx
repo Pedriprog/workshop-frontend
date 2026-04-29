@@ -5,7 +5,7 @@ import { useScrolled } from '@/hooks'
 export function Navbar() {
   const { isScrolled } = useScrolled()
   return (
-    <header className={`sticky top-0 z-[1100] bg-primary transition-all duration-300 ${isScrolled ? 'shadow lg:bg-primary/95 lg:shadow-lg lg:backdrop-blur-md' : 'shadow'}`}>
+    <header className={`sticky top-0 z-1100 bg-primary transition-all duration-300 ${isScrolled ? 'shadow lg:bg-primary/95 lg:shadow-lg lg:backdrop-blur-md' : 'shadow'}`}>
       <NavDesktop />
       <NavMobile />
     </header>
