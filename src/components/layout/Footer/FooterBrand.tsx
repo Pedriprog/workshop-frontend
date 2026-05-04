@@ -28,7 +28,7 @@ export function FooterBrand() {
     <div>
       <div className="flex items-center gap-2 text-xl font-bold">
         <span aria-hidden className="text-accent">
-          <img src="/assets/icons/logo.png" alt="" className="h-12 w-12" />
+          <img src={`${import.meta.env.BASE_URL}assets/icons/logo.png`} alt="" className="h-12 w-12" />
         </span>
         <span>SpigaZero</span>
       </div>
