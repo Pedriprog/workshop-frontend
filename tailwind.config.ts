@@ -15,6 +15,15 @@ export default {
         textLight: '#FFFFFF',
         star: '#FFC107',
         border: '#E0D9F0',
+        keyframes: {
+          'bounce-x': {
+            '0%, 100%': { transform: 'translateX(0)' },
+            '50%': { transform: 'translateX(4px)' },
+          },
+        },
+        animation: {
+          'bounce-x': 'bounce-x 1s ease-in-out infinite',
+        },
       },
       fontFamily: {
         sans: ['Fredoka', 'ui-sans-serif', 'system-ui', 'sans-serif'],

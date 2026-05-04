@@ -10,7 +10,11 @@ export function FooterContacts() {
       </p>
       <p className="mt-2 flex items-center gap-2 text-sm text-white/75">
         <PhoneIcon className="h-4 w-4" />
-        +39 392 241 9102
+        +39 350 105 8360
+      </p>
+      <p className="mt-2 flex items-center gap-2 text-sm text-white/75">
+        <PhoneIcon className="h-4 w-4" />
+        +39 389 937 5967
       </p>
     </div>
   )

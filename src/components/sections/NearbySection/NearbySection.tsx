@@ -16,11 +16,20 @@ export function NearbySection({ restaurants, isLoading = false }: NearbySectionP
             {[1, 2, 3, 4].map((item) => <SkeletonCard key={item} />)}
           </div>
         ) : restaurants.length ? (
-          <RestaurantCarousel
-            restaurants={restaurants}
-            title="Altri ristoranti in zona"
-            subtitle="Nuove opzioni gluten-free vicino a te."
-          />
+          <>
+            <div className="mb-3 flex items-center gap-1 text-xs text-textDark/60">
+              <span className="animate-bounce-x">→</span>
+              <span>scorri per vedere altri</span>
+            </div>
+            <div className="relative">
+              <RestaurantCarousel
+                restaurants={restaurants}
+                title="Altri ristoranti in zona"
+                subtitle="Nuove opzioni gluten-free vicino a te."
+              />
+              <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-linear-to-l from-bgLight to-transparent" />
+            </div>
+          </>
         ) : (
           <p className="rounded-xl border border-border p-6 text-center text-textDark/70">Nessun ristorante trovato</p>
         )}
